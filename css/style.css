@@ -167,15 +167,11 @@ section {
   color: var(--text-main);
 }
 
-.nav-logo .logo-icon {
-  width: 36px;
+.nav-logo .logo-img {
   height: 36px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .nav-links {
