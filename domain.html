@@ -167,44 +167,49 @@
       <div class="domain-tab-content active" id="tab-literature">
         <h2 class="domain-tab-title">Literature Survey</h2>
 
-        <!-- Highlight Card -->
-        <div class="domain-highlight-card">
-          <div class="hl-label">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/></svg>
-            Literature Survey
-          </div>
-          <p class="hl-text"><strong>Urine microscopy remains a fundamental diagnostic technique</strong> used to identify urinary tract infections, kidney stones, and renal disorders by analyzing microscopic elements such as red blood cells (RBCs), white blood cells (WBCs), bacteria, crystals, and casts. While it is widely used in clinical laboratories, traditional analysis relies heavily on manual observation, making it time-consuming and subject to variability. Recent advancements in artificial intelligence, particularly deep learning, have demonstrated strong potential in automating medical image analysis and improving diagnostic accuracy.</p>
+        <!-- Literature Survey Content -->
+        <div style="max-width: 1000px; margin: 0 auto; background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg); padding:48px; box-shadow:var(--shadow-card); line-height:1.9; font-size:1.05rem; color:var(--text-muted); text-align:justify;">
+
+          <p style="margin-bottom:1.5rem; margin-left:auto; margin-right:auto;">Microscopy of urine remains a foundation in the diagnosis of urinary tract and renal diseases, as it allows for the direct observation of diagnostically important particles including white blood cells, red blood cells, bacteria, yeast, casts, and crystals, reflecting infection, inflammation, hematuria, and renal pathology <sup style="color:var(--primary);font-weight:700;">[1]</sup>. Recent advances concerning deep learning have significantly improved automated urine sediment analysis. CNN-based object detectors like YOLO and Bidirectional Context Propagation Networks showed pretty good performance in detecting WBCs and other formed elements in microscopic images <sup style="color:var(--primary);font-weight:700;">[2], [3], [4], [5]</sup>. Increasingly, large and clinically annotated datasets have accelerated these developments further <sup style="color:var(--primary);font-weight:700;">[6]</sup>. In most of these studies focusing on detection, there has been a major focus on high accuracy of localization and computational efficiency, while considering limited clinical interpretation or diagnostic reasoning.</p>
+
+          <p style="margin-bottom:1.5rem; margin-left:auto; margin-right:auto;">In the context of instance and pixel-level segmentation, various approaches including YOLOv5n-based models have been developed to further refine the boundary segmentation of particles and quantitative analysis <sup style="color:var(--primary);font-weight:700;">[7]</sup>. Although the precision of the segmentation has been improved by these models, the result of the segmentation itself has not been considered in higher-level diagnostic decision mechanisms based on the translation of microscopic-level results into disease-level diagnostics <sup style="color:var(--primary);font-weight:700;">[8], [9]</sup>. Similarly, while various deep learning-based models have reported highly accurate bacterial classifications, they have been primarily reported from culture images and isolated bacterial samples rather than the microscopic examination of urine samples, which indicates a limitation in the real-world applicability of the approach in routine urinalysis examinations <sup style="color:var(--primary);font-weight:700;">[10], [11]</sup>.</p>
+
+          <p style="margin-bottom:1.5rem; margin-left:auto; margin-right:auto;">Apart from microscopy, various articles aimed to predict UTIs with symptom-oriented UTI prediction models based on clinical features such as laboratory results, flow cytometry, optical techniques, and patient symptoms, which relied on machine learning algorithms <sup style="color:var(--primary);font-weight:700;">[12], [13], [14], [15]</sup>. Even though such systems possess strong predictive power, they remain black boxes without microscopic interpretability, hence hindering a clinician's trust. In addition, computerized analysis of urinary crystals, RBCs, and casts with deep learning has shown early indications of its potential to be used in kidney stones risk prediction, hematuria etiology prediction, and kidney disease diagnosis <sup style="color:var(--primary);font-weight:700;">[16], [17], [18], [19], [20], [21], [22], [23]</sup>. However, many such systems analyze each urine component separately without considering the sub-classifications within each component.</p>
+
+          <p style="margin-bottom:0; padding:24px 30px; background:linear-gradient(135deg, rgba(0,151,167,0.05), rgba(92,53,168,0.05)); border-left:4px solid var(--secondary); border-radius:0 var(--radius-md) var(--radius-md) 0; color:var(--text-main); font-weight:500; margin-left:auto; margin-right:auto;">Overall, while the existing literature provides approaches to the detection, segmentation, classification, and prediction of urine sediment images, it mainly focuses on treating these as separate tasks. Nonetheless, there is a gap, particularly with regards to the development of <strong>integrated, microscopy-based AI methodologies</strong> for the comprehensive diagnosis of disorders of the urinary tract and kidneys.</p>
+
         </div>
 
-        <!-- Info Cards -->
-        <div class="domain-cards-grid">
-          <div class="domain-info-card">
-            <div class="dic-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
-            </div>
-            <div>
-              <h4>Traditional Analysis</h4>
-              <p>Manual urine microscopy requires skilled technicians to visually inspect samples under a microscope. This process is labor-intensive, time-consuming, and prone to inter-observer variability, which can lead to inconsistent diagnostic outcomes.</p>
-            </div>
-          </div>
-
-          <div class="domain-info-card">
-            <div class="dic-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/></svg>
-            </div>
-            <div>
-              <h4>AI Advancements</h4>
-              <p>Deep learning techniques, especially Convolutional Neural Networks (CNNs), have significantly improved image classification and object detection tasks in healthcare. These models can automatically identify microscopic elements with high accuracy and speed, reducing reliance on manual interpretation.</p>
-            </div>
-          </div>
-
-          <div class="domain-info-card">
-            <div class="dic-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/></svg>
-            </div>
-            <div>
-              <h4>Current Limitations</h4>
-              <p>Despite these advancements, most existing AI systems focus on detecting individual components rather than providing a comprehensive diagnostic interpretation. Additionally, many models lack integration with clinical data, limiting their practical usability in real-world healthcare environments.</p>
+        <!-- References -->
+        <div style="margin-top: 2.5rem;">
+          <button onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('.ref-arrow').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';" style="display:flex; align-items:center; gap:10px; background:none; border:1px solid var(--border); border-radius:var(--radius-md); padding:12px 20px; cursor:pointer; font-family:inherit; font-size:0.9rem; font-weight:600; color:var(--text-main); width:100%; transition: all 0.3s ease;">
+            <span class="ref-arrow">▶</span> 📚 References (23 citations)
+          </button>
+          <div style="display:none; margin-top:16px; background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px 28px; box-shadow:var(--shadow-card);">
+            <div style="font-size:0.82rem; color:var(--text-muted); line-height:2; text-align:left;">
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[1]</span>"Urinary Tract Infections: Epidemiology, Mechanisms of Infection and Treatment Options," <em>Nature Reviews Microbiology</em>, 2015.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[2]</span>"A Bidirectional Context Propagation Network for Urine Sediment Particle Detection in Microscopic Images," in <em>IEEE ICASSP</em>, 2020.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[3]</span>"Microscopic Urinary Sediments Detection Using Deep Learning," in <em>2024 Second Jordanian International Biomedical Engineering Conference (JIBEC)</em>, 2024.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[4]</span>"Microscopic Urinary Particle Detection by Different YOLOv5 Models with Evolutionary Genetic Algorithm Based Hyperparameter Optimization," <em>Computerized Medical Imaging and Graphics</em>, 2024.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[5]</span>"Regional Constraint Consistency Contrastive Learning for Automatic Detection of Urinary Sediment," <em>Biocybernetics and Biomedical Engineering</em>, 2025.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[6]</span>"A Clinical Microscopy Dataset to Develop a Deep Learning Diagnostic Test for Urinary Tract Infection," <em>Scientific Data</em>, 2024.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[7]</span>"The Urine Formed Element Instance Segmentation Based on YOLOv5n," <em>Scientific Reports</em>, 2024.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[8]</span>"Deep Learning Classification of Urinary Sediment Crystals with Optimal Parameter Tuning," <em>Scientific Reports</em>, 2022.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[9]</span>"A Swin-LBP Feature Engineering Model for Urine Sediment Classification," <em>Neural Computing and Applications</em>, 2023.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[10]</span>"Rapid Bacterial Colony Classification Using Deep Learning," <em>BMC Bioinformatics</em>, 2021.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[11]</span>"Deep Learning-Based Culture-Free Bacteria Detection in Urine Using Large-Volume Microscopy," <em>Biomedical Optics Express</em>, 2022.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[12]</span>"An Artificial Intelligence-Driven Support Tool for Prediction of Urine Culture Test Results," <em>Clinica Chimica Acta</em>, 2024.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[13]</span>"Prediction of Urinary Tract Infection Using Machine Learning Methods," <em>Journal of Medical Systems</em>, 2022.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[14]</span>"Optical Method Supported by Machine Learning for Urinary Tract Infection Detection and Urosepsis Risk Assessment," <em>Journal of Biophotonics</em>, 2023.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[15]</span>"Analysis of Urinary Tract Infections Using Machine Learning-Based Prediction and Classification," in <em>2024 7th ICCPCT</em>, 2024.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[16]</span>"A Recognition Method of Urine Cast Based On Deep Learning," in <em>IEEE IWSSIP</em>, 2019.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[17]</span>"Automatic Detecting and Recognition of Casts in Urine Sediment Images," in <em>IEEE International Conference on Wavelet Analysis and Pattern Recognition</em>, 2009.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[18]</span>"Deep Learning Classification of Urinary Sediment Crystals with Optimal Parameter Tuning," <em>Scientific Reports</em>, 2022.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[19]</span>"Symptomatic Analysis Prediction of Kidney Related Diseases using Machine Learning," in <em>2021 3rd ICAC</em>, 2021.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[20]</span>"UF-5000 Urinary Erythrocyte Parameters versus Urinary Aberrant Erythrocytes and Acanthocytes for Diagnosing IgA Glomerular Hematuria," <em>Annals of Laboratory Medicine</em>, 2022.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[21]</span>"Urinary Red Blood Cell Morphology and Its Diagnostic Limitations in Modern Urinalysis," <em>Journal of Nephrology</em>, 2023.</p>
+              <p style="margin:0 0 6px;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[22]</span>"Automated Kidney Stone Detection Using Image Processing Techniques," <em>International Journal of Imaging Systems and Technology</em>, 2024.</p>
+              <p style="margin:0;"><span style="color:var(--primary);font-weight:700;margin-right:6px;">[23]</span>"Urine Sediment Analysis by Using Convolution Neural Network," in <em>IEEE International Engineering Conference</em>, 2022.</p>
             </div>
           </div>
         </div>
